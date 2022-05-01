@@ -1,25 +1,7 @@
 import json,re
 
-x = []
+from main import test
 
-def hello():
-    datos = input("ingresa los datos: ")
-    campos = str(datos).split(",")
-    com = re.findall(";$",datos)
-    if com:
-        for cam in campos:
-            y = {f"{cam}":""}
-            y = str(f'"{y}"')
-            x.append(y)
-            j = json.dumps(x,indent=4)
-            print(j)
-    else:
-        for cam in campos:
-            y = {f"{cam}":""}
-            x.append(y)
-            hello()
-
-hello()
 
 
 
@@ -34,6 +16,7 @@ def testt():
     campos = tuple(campos)
 
     a = []
+
     if com:
         for cam in campos:
             cam = ' '
@@ -48,3 +31,5 @@ def testt():
   # except:
   #   print(NameError)
 
+
+testt()
